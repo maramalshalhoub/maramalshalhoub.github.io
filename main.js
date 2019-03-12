@@ -1,3 +1,4 @@
+//created multidimensional array that holds all possible wins
 var winArray = [
   ["1", "2", "3"],
   ["4", "5", "6"],
@@ -8,52 +9,83 @@ var winArray = [
   ["3", "5", "7"],
   ["1", "5", "9"]
 ];
+//declared 2 variables that holds each players clicks
 var currentX = [];
 var currentO = [];
 var flag = true;
 var checkWin = 0;
 
+//on click function that adds classes on each user click
 $(".ticTac").one("click", function(event) {
   // console.log(event.target.id);
 
+//flag used to switch between players so it it start with one as X 
+//adds class X if player 1 clicks
   if (flag) {
     $(event.target).addClass("x");
 
+//checks if it has class X then enter and add 1 to check win for player 1.
+//it be helpful to calculate the check wins later
     if ($(this).hasClass("x")) {
       checkWin++;
 
+//if statement to check the if the player plays more than 3 times then
+// start checking the check function
       if (currentX.length >= 3) {
         check(currentX, winArray);
       }
+  //each click user clicks it pushes it to the currentX array that allows the user
+  // to later compare
+
       currentX.push(event.target.id);
     }
+//each player has one option to click
+//once user click pushed to the array it will change the flag value for the O option
     flag = !flag;
+//enters function check with current attribute  
     check(currentX, "X");
-  } else {
+  } 
+  //else adds class O if player 2 clicks
+ 
+  else {
     $(event.target).addClass("o");
 
+//checks if it has class O then enter and add 1 to check win for player 1.
+//it be helpful to calculate the check wins later
     if ($(this).hasClass("o")) {
       checkWin++;
 
+//if statement to check the if the player2 plays more than 3 times then
+// start checking the check function
       if (currentO.length >= 3) {
         check(currentO, winArray);
       }
+//each click user clicks it pushes it to the currentO array that allows the user
+// to compare it with main possible winArray array
       currentO.push(event.target.id);
     }
+//once user click pushed to the O array it will change the flag value to 1
+//and switch to player1 again
     flag = true;
     check(currentO, "O");
   }
 });
 
+//function created to check the both arrays X and O and compare it to winArray multidimensional array
 function check(array, winner) {
   // console.log(arr, "x");
-  var turn = array.sort();
+  //declare variable Player turn that sorts all possible arrays holds each players clicks 
+  var playerTurn = array.sort();
   console.log("X: ", currentX);
   console.log("O: ", currentO);
   // debugger;
+  //first for loop that enters the first array 
   for (var k = 0; k < winArray.length; k++) {
+    //declare new variable to join 
     var arrayJoin = winArray[k].join();
     for (var i = 0; i <= 3; i++) {
+      //if statement to compare each clicks (currentX for player1) and (currentO for player2)
+      //with the main array win Array (vertical)(horizontal)(diagonal)
       if (
         (array.includes(winArray[i][0]) &&
           array.includes(winArray[i][1]) &&
@@ -70,14 +102,17 @@ function check(array, winner) {
       ) {
         console.log("X: ", currentX);
         console.log("O: ", currentO);
-
+//if compared successfully and user wins alert success message
         alert(`Player ${winner} won`);
-        turn = turn.slice(i, i + 3);
-        // turn = turn.join();
-        console.log(turn);
+        //this variable slices 3 values of the array if it's greater than 3 
+        playerTurn = playerTurn.slice(i, i + 3);
+        // playerTurn = playerTurn.join();
+        console.log(playerTurn);
+       //end of loop
         return;
       }
-      if (turn == arrayJoin) {
+  //if statement compares the player turn with the joined array 
+      if (playerTurn == arrayJoin) {
         // debugger;
         alert(`Player ${winner} won`);
         return;
