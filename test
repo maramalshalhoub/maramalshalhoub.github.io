@@ -1,0 +1,450 @@
+
+// $(".ticTac").on("mouseenter", function (event) {
+//     $(event.target).css("background-image", url("img/background.png"));
+// });
+
+// $(".ticTac").on("mouseleave", function (event) {
+//     $(event.target).css("background-image", url("img/background.png"));
+// });
+// if(!(($(event.target).hasClass("x")) || ($(event.target).hasClass("o")))){ 
+
+
+
+
+  //later add all this lines in one function that cannot be entered before the 5th iteration:
+  // if(currentX.length >= 3 || currentO.length >= 3){
+    
+
+
+
+
+// function allowDrop(ev) {
+//     ev.preventDefault();
+//   }
+  
+//   function drag(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
+//   }
+  
+//   function drop(ev) {
+//     ev.preventDefault();
+//     var data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+//   }
+//   document.querySelector('.btn-new').addEventListener("click", function(){
+//     currentScore = 0;
+//     currentPlayer = 0;
+//     finalScore = [0,0];
+//      win = 50;
+//   });
+//   document.querySelector(".btn-hold").addEventListener("click", function(){
+
+//     finalScore[currentPlayer] += currentScore;
+//     document.querySelector("#score-" + currentPlayer).textContent = finalScore[currentPlayer];
+//     currentScore = 0;
+//     document.querySelector("#current-"+ currentPlayer).textContent = currentScore;
+
+//     next();
+
+// });
+//   allowDrop();
+//   drag();
+//   drop();
+
+
+
+        // if (checkWin >=3  && currentX.sort.includes([winArray])) {
+        //     console.log("congrats");
+        // }
+      // }
+    //  }
+
+
+
+    //       if((currentX.includes(winArray[i][0]) && currentX.includes(winArray[i][1]) && currentX.includes(winArray[i][2]) )||
+//          (currentX.includes(winArray[i][0]) && currentX.includes(winArray[i][1]) && currentX.includes(winArray[i][2]) )|| 
+//          (currentX.includes(winArray[i][0]) && currentX.includes(winArray[i][1]) && currentX.includes(winArray[i][2]) ))
+// {
+      // if((currentX[0]==winArray[i][0]  || currentX[0] == winArray[i][1] || currentX[0]==winArray[i][2]) &&
+      // (currentX[1]==winArray[i][0]  || currentX[1] == winArray[i][1] || currentX[1]==winArray[i][2]) &&
+      // (currentX[2]==winArray[i][0]  || currentX[2] == winArray[i][1] || currentX[2]==winArray[i][2]) &&
+      // (currentX[3]==winArray[i][0]  || currentX[3] == winArray[i][1] || currentX[3]==winArray[i][2]) &&
+      // (currentX[4]==winArray[i][0]  || currentX[4] == winArray[i][1] || currentX[4]==winArray[i][2]) &&
+      // (currentX[5]==winArray[i][0]  || currentX[5] == winArray[i][1] || currentX[5]==winArray[i][2]) &&
+      // (currentX[6]==winArray[i][0]  || currentX[6] == winArray[i][1] || currentX[6]==winArray[i][2]) &&
+      // (currentX[7]==winArray[i][0]  || currentX[7] == winArray[i][1] || currentX[7]==winArray[i][2]) &&
+      // (currentX[8]==winArray[i][0]  || currentX[8] == winArray[i][1] || currentX[8]==winArray[i][2]) ){
+      // currentX.sort.includes([winArray])
+      
+      // if((winArray[i][0] == currentX[0] && winArray[i][1] == currentX[1] && winArray[i][2] == currentX[2]) ||
+      //    (winArray[i][0] == currentO[0] && winArray[i][1] == currentO[1] && winArray[i][2] == currentO[2]) ||
+      //    (winArray[i][0] == currentX[3] && winArray[i][1] == currentX[4] && winArray[i][2] == currentX[5]) ||
+      //    (winArray[i][0] == currentO[3] && winArray[i][1] == currentO[4] && winArray[i][2] == currentO[5]) ||
+      //    (winArray[i][0] == currentX[6] && winArray[i][1] == currentX[7] && winArray[i][2] == currentX[8]) ||
+      //    (winArray[i][0] == currentO[6] && winArray[i][1] == currentO[7] && winArray[i][2] == currentO[8]) ){
+        
+      //     console.log("line 56 - inside if loop")
+      //   alert("match found");
+      // }
+
+
+    
+$(".ticTac").one("click", function(event) {
+  console.log(event.target.id);
+
+  if (flag) {
+    $(event.target).addClass("x");
+    $(event.target).off("mouseleave");
+    // checkWin = 0;
+
+    if ($(this).hasClass("x")) {
+      checkWin++;
+      if (checkWin >= 5) {
+        win();
+      }
+      currentX.push(event.target.id);
+      
+    }
+    flag = !flag;
+   
+  } else {
+    $(event.target).addClass("o");
+    $(event.target).off("mouseleave");
+    // checkWin = 0;
+
+    if ($(this).hasClass("o")) {
+      checkWin++;
+      if (checkWin >= 5) {
+        win();
+      }
+      currentO.push(event.target.id);
+      
+    }
+    flag = true;
+    
+  }
+});
+
+function win(currentX ) {
+  // for (var i=0; i< currentX.length ; j++){
+    // console.log(winArray)
+    for (var i = 0; i < winArray.length; i++) {
+      // console.log([currentX]);
+      // console.log([currentO]);
+      var wins = 0;
+      for (var j = 0; j < winArray[i].length; j++) {
+      //   if (currentX === (winArray[i][j]) !== -1) {
+      //     wins++;
+      //   }
+      //   if(wins===3){
+      //   alert("match found");
+      // }
+        if((winArray[i][0] == currentX[0] && winArray[i][1] == currentX[1] && winArray[i][2] == currentX[2]) ||
+          (winArray[i][0] == currentO[0] && winArray[i][1] == currentO[1] && winArray[i][2] == currentO[2]) ){
+        // if (winArray[i].includes(currentX[j])) {
+         
+      }
+    }
+  }
+}
+
+function checkWin(currentX, winArray) {
+   var sortedX = currentX.sort().join();
+   console.log(sortedX)
+    for (let secondX of winArray) {
+        sortedSecondX = secondX.split("").sort().join();
+        if (sortedX === sortedSecondX) {
+            console.log("win");
+        }
+    }
+}
+checkWin(currentX, winArray);
+
+
+function win() {
+  for (var i = 0; i < winArray.length; i++) {
+    var wins = 0;
+    for (var j = 0; j < winArray[i].length; j++) {
+      if ((currentX === winArray[i][j]) !== -1) {
+        wins++;
+      }
+      if (wins === 3) {
+        alert("match found");
+      }
+      if (
+         (winArray[i][0] == currentX[0] &&
+          winArray[i][1] == currentX[1] &&
+          winArray[i][2] == currentX[2]) ||
+         (winArray[i][0] == currentO[0] &&
+          winArray[i][1] == currentO[1] &&
+          winArray[i][2] == currentO[2])
+      ) {
+        // if (winArray[i].includes(currentX[j])) {
+      }
+    }
+  }
+}
+
+function check2(currentX, winArray) {
+
+    for (var k= 0; k < winArray.length; k++) {
+        var both= 0;
+        for (var i= 0; i < winArray[k].length; i++) {
+            if (currentX.includes(winArray[i][k]) ) {
+                both++;  
+            }
+        }
+
+        if (both==winArray.length) {
+            console.log('win');
+        }
+    }
+} 
+
+
+
+
+function win() {
+  console.log(currentX)
+  console.log(currentO);
+  
+  for (var i = 0; i < winArray.length; i++) {
+    var wins = 0;
+    
+    for (var j = 0; j < winArray[i].length; j++) {
+      if ((currentX === winArray[i][j]) !== -1) {
+        wins++;
+        return
+        
+      }
+      if (wins === 3) {
+        alert("match found");
+        return
+      }
+
+      console.log(winArray[i][0] == currentX[0])
+      console.log(winArray[i][1] == currentX[1])
+      console.log(winArray[i][2] == currentX[2])
+      console.log(winArray[i][0] == currentO[0])
+      console.log( winArray[i][1] == currentO[1])
+      console.log( winArray[i][2] == currentO[2])
+      
+      if ((winArray[i][0] == currentX[0] &&
+           winArray[i][1] == currentX[1] &&
+           winArray[i][2] == currentX[2]) ||
+          (winArray[i][0] == currentO[0] &&
+           winArray[i][1] == currentO[1] &&
+           winArray[i][2] == currentO[2])) {
+            console.log("win");
+            return
+      
+      }
+    }
+  }
+}
+win(currentX,winArray)
+
+
+
+function checkWinner(currentX, winArray) {
+  var sortedX = currentX.sort().join();
+  console.log(sortedX)
+   for (let secondX of winArray) {
+       sortedSecondX = secondX.sort().join();
+       if (sortedX === sortedSecondX) {
+        if(currentO.includes(winArray[i][0]) &&
+           currentO.includes(winArray[i][1]) &&
+            currentO.includes(winArray[i][2])){
+
+           console.log("win");
+       }
+   }
+}
+}
+checkWinner(currentX,winArray );
+checkWinner(currentO,winArray );
+
+
+
+
+// function checkWinner(currentX, winArray) {
+//   var sortedX = currentX.split(" ").sort().join();
+//   console.log(sortedX);
+  
+//    for (let secondX of winArray) {
+//        var sortedSecondX = secondX.split(" ").sort().join();
+//        if (sortedX === sortedSecondX) {
+//            console.log("win");
+//        }
+//    }
+// }
+
+
+
+
+
+
+
+
+
+var winArray = [
+  ["1", "2", "3"],
+  ["4", "5", "6"],
+  ["7", "8", "9"],
+  ["1", "4", "7"],
+  ["2", "5", "8"],
+  ["3", "6", "9"],
+  ["3", "5", "7"],
+  ["1", "5", "9"]
+];
+var currentX = [];
+var currentO = [];
+var flag = true;
+var checkWin = 0;
+
+$(".ticTac").one("click", function(event) {
+  // console.log(event.target.id);
+
+  if (flag) {
+    $(event.target).addClass("x");
+    // $(event.target).off("mouseleave");
+
+    // if ($(this).hasClass("x")) {
+      checkWin++;
+      // if (currentX.length >= 3) {
+        // check(currentX, winArray);
+      // }
+      currentX.push(event.target.id);
+    // }
+
+    flag = !flag;
+    check(currentX);
+  } else {
+    $(event.target).addClass("o");
+    // $(event.target).off("mouseleave");
+
+    // if ($(this).hasClass("o")) {
+      checkWin++;
+      // if (currentO.length >= 3) {
+        // check(currentO, winArray);
+      // }
+      currentO.push(event.target.id);
+    // }
+    check(currentO);
+    flag = true;
+  }
+  // check(currentO, winArray);
+});
+
+function check(arr) {
+  // console.log(arr, "x");
+var temp = arr.sort()
+  // console.log(currentX);
+  // console.log(currentO);
+  // debugger;
+  for (var k = 0; k < winArray.length; k++) {
+    for (var i = 0; i < temp.length ; i++) {
+      var arr2 = winArray[k].sort().join();
+      temp = temp.slice(i,i+3)
+      // temp = temp.join();
+      console.log(temp)
+      if (
+       temp == arr2
+      ) {
+        // debugger;
+        console.log("Player X won");
+        alert("Player X won");
+        return;
+      } 
+      // else if (
+      //   currentO.includes(winArray[i][0]) &&
+      //   currentO.includes(winArray[i][1]) &&
+      //   currentO.includes(winArray[i][2])
+      // ) {
+      //   console.log("Player O won");
+      //   alert("Player O won");
+      //   return;
+      // }
+      
+    }
+  }
+}
+
+
+
+
+// //check vartical
+// // for( var x=0; x<3; x++){
+//   if(currentX[1] != ' ' &&
+//   currentX[1] == currentX[2] &&
+//   currentX[1] == currentX[3]){
+//     return currentX[1]
+//   }
+//  // }
+// //check diagonal
+//  // for( var y=0;y<3; y++){
+//   if((currentX[1] != ' ' &&
+//   currentX[1] == currentX[5] &&
+//   currentX[1] == currentX[9]) ||
+//   (currentO[1] != ' ' &&
+//   currentO[1] == currentO[5] &&
+//   currentO[1] == currentO[9]) ){
+//    currentX[1]
+//    currentO[1]
+//    return 
+//   }
+//  // }
+//  //check reverse diagonal
+//  // for( var z=0; z<3; z++){
+//   if((currentX[9] != ' ' &&
+//   currentX[9] == currentX[1] &&
+//   currentX[9] == currentX[5]) ||
+//   (currentO[9] != ' ' &&
+//   currentO[9] == currentO[1] &&
+//   currentO[9] == currentO[5])  ){
+//    currentX[9]
+//    currentO[9]
+//    return 
+//   }
+//  // }
+
+
+
+//check vartical
+for( var x=0; x<4; x++){
+  if(currentX[1] !== ' ' &&
+  currentX[1] === currentX[2] &&
+  currentX[1] === currentX[3] && 
+  currentX[2] === currentX[3]){
+    return currentX[1]
+  }
+ }
+//check diagonal
+ for( var y=0;y<4; y++){
+  if((currentX[1] !== ' ' &&
+  currentX[1] === currentX[5] &&
+  currentX[1] === currentX[9]) ||
+  (currentO[1] !== ' ' &&
+  currentO[1] === currentO[5] &&
+  currentO[1] === currentO[9]) ){
+  //  console.log("X: ",currentX);
+  //  console.log("O: ",currentO);
+   console.log("Player X won");
+        alert("Player X won");
+   return 
+  }
+ }
+ //check reverse diagonal
+ for( var z=0; z<4; z++){
+  if((currentX[9] !== ' ' &&
+  currentX[9] === currentX[1] &&
+  currentX[9] === currentX[5]) ||
+  (currentO[9] !== ' ' &&
+  currentO[9] === currentO[1] &&
+  currentO[9] === currentO[5])  ){
+  
+   console.log("Player o won");
+        alert("Player o won");
+   return 
+  }
+ }

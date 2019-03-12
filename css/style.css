@@ -1,0 +1,137 @@
+header{
+    color:cc9900;
+    align-content: center;
+}
+body{
+    color:cc9900;
+}
+.land-body{
+    background-image: url(../img/homePage.jpg);
+    background-size: 75%;
+    
+}
+.home-img{
+    position: absolute; 
+    justify: center;
+    top: 30%;
+    right:40%;
+    left:35%;
+    border-radius: 8px;
+}
+#land{
+    color: #cc9900;
+    font-size: 80px;
+    padding: 5px;
+    text-align: center;
+}
+.game{
+    
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 427px;
+    height: 425px;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0 auto;
+    border: solid #cc9900 0.5px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    /* opacity: 0.7; */
+    /* position: absolute; */
+}
+.ticTac{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #cc9900;
+    height: 125px;
+    width: 135px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: inline-block;
+    flex-direction:column;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+#playAgain{
+    width:110px;
+    padding:5px;
+    color:white;
+    border:none;
+    background-color: #cc9900;
+    align-items:flex-end;
+    border-radius: 15px;    
+}
+footer{
+    display: block;
+    text-align: center;   
+}
+.btn-new{
+    width:110px;
+    padding:5px;
+    color:white;
+    border:none;
+    background-color: #cc9900;
+    align-items:flex-end;
+    border-radius: 15px;
+}
+.btn-hold{
+    width:110px;
+    padding:5px;
+    color:white;
+    border:none;
+    background-color: #cc9900;
+    align-items:flex-end;
+    border-radius: 15px;
+}
+.x{
+    background-color: #D8D8D8;
+    opacity: 0.9;
+    background-image: url("../img/x_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.o{
+    background-color: #D8D8D8;
+    opacity: 0.9;
+    background-image: url("../img/o_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* maroon color: #750D37 */
+/* 
+body {
+    text-align: center;
+  }
+  
+  .container {
+    margin-top: 150px;
+  }
+  
+  .zone {
+    width: 100px;
+    height: 100px;
+    border: solid black;
+    margin: 20px;
+    display: inline-block;
+    transition: 0.5s all;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  h2 {
+    display: inline;
+    color: orangered;
+    font-size: 50px;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    padding: 15px;
+    border: 2px double orangered;
+    border-radius: 10px;
+    margin: auto;
+  } */
