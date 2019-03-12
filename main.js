@@ -28,7 +28,7 @@ $(".ticTac").one("click", function(event) {
       currentX.push(event.target.id);
     }
     flag = !flag;
-    check(currentX, 'X');
+    check(currentX, "X");
   } else {
     $(event.target).addClass("o");
 
@@ -41,112 +41,47 @@ $(".ticTac").one("click", function(event) {
       currentO.push(event.target.id);
     }
     flag = true;
-    check(currentO, 'O');
+    check(currentO, "O");
   }
 });
 
-/*
-function check(arr) {
+function check(array, winner) {
   // console.log(arr, "x");
-  var temp = arr.sort();
+  var turn = array.sort();
   console.log("X: ", currentX);
   console.log("O: ", currentO);
   // debugger;
   for (var k = 0; k < winArray.length; k++) {
-    var arr2 = winArray[k].join();
+    var arrayJoin = winArray[k].join();
     for (var i = 0; i <= 3; i++) {
       if (
-        (currentX.includes(winArray[i][0]) &&
-          currentX.includes(winArray[i][1]) &&
-          currentX.includes(winArray[i][2])) ||
-        (currentX.includes(winArray[i][2]) &&
-          currentX.includes(winArray[i][1]) &&
-          currentX.includes(winArray[i][0])) ||
-        (currentX.includes(winArray[i][1]) &&
-          currentX.includes(winArray[i][0]) &&
-          currentX.includes(winArray[i][2])) ||
-        (currentX.includes(winArray[i][2]) &&
-          currentX.includes(winArray[i][0]) &&
-          currentX.includes(winArray[i][1]))
+        (array.includes(winArray[i][0]) &&
+          array.includes(winArray[i][1]) &&
+          array.includes(winArray[i][2])) ||
+        (array.includes(winArray[i][2]) &&
+          array.includes(winArray[i][1]) &&
+          array.includes(winArray[i][0])) ||
+        (array.includes(winArray[i][1]) &&
+          array.includes(winArray[i][0]) &&
+          array.includes(winArray[i][2])) ||
+        (array.includes(winArray[i][2]) &&
+          array.includes(winArray[i][0]) &&
+          array.includes(winArray[i][1]))
       ) {
-            console.log("X: ", currentX);
-            console.log("O: ", currentO);
+        console.log("X: ", currentX);
+        console.log("O: ", currentO);
 
-            console.log("Player X won");
-            alert("Player X won");
-            temp = temp.slice(i, i + 3);
-            // temp = temp.join();
-            console.log(temp);
-            return;
+        alert(`Player ${winner} won`);
+        turn = turn.slice(i, i + 3);
+        // turn = turn.join();
+        console.log(turn);
+        return;
       }
-      if (temp == arr2) {
-              // += arr[length - 1 - i][i]
-              // debugger;
-              console.log("Player X won");
-              alert("Player X won");
-              return;
-      } else if (
-        (currentO.includes(winArray[i][0]) &&
-          currentO.includes(winArray[i][1]) &&
-          currentO.includes(winArray[i][2])) ||
-        (currentO.includes(winArray[i][2]) &&
-          currentO.includes(winArray[i][1]) &&
-          currentO.includes(winArray[i][0])) ||
-        (currentO.includes(winArray[i][1]) &&
-          currentO.includes(winArray[i][0]) &&
-          currentO.includes(winArray[i][2])) ||
-        (currentO.includes(winArray[i][2]) &&
-          currentO.includes(winArray[i][0]) &&
-          currentO.includes(winArray[i][1]))
-        ) {
-          console.log("Player O won");
-          alert("Player O won");
-          return;
+      if (turn == arrayJoin) {
+        // debugger;
+        alert(`Player ${winner} won`);
+        return;
       }
-    }
-  }
-}
-*/
-
-function check(arr, winner) {
-  // console.log(arr, "x");
-
-  var temp = arr.sort();
-  console.log("X: ", currentX);
-  console.log("O: ", currentO);
-  // debugger;
-  for (var k = 0; k < winArray.length; k++) {
-    var arr2 = winArray[k].join();
-    for (var i = 0; i <= 3; i++) {
-      if (
-        (arr.includes(winArray[i][0]) &&
-          arr.includes(winArray[i][1]) &&
-          arr.includes(winArray[i][2])) ||
-        (arr.includes(winArray[i][2]) &&
-          arr.includes(winArray[i][1]) &&
-          arr.includes(winArray[i][0])) ||
-        (arr.includes(winArray[i][1]) &&
-          arr.includes(winArray[i][0]) &&
-          arr.includes(winArray[i][2])) ||
-        (arr.includes(winArray[i][2]) &&
-          arr.includes(winArray[i][0]) &&
-          arr.includes(winArray[i][1]))
-      ) {
-            console.log("X: ", currentX);
-            console.log("O: ", currentO);
-
-            alert(`Player ${winner} won`);
-            temp = temp.slice(i, i + 3);
-            // temp = temp.join();
-            console.log(temp);
-            return;
-      }
-      if (temp == arr2) {
-              // += arr[length - 1 - i][i]
-              // debugger;
-              alert(`Player ${winner} won`);
-              return;
-      } 
     }
   }
 }

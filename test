@@ -448,3 +448,68 @@ for( var x=0; x<4; x++){
    return 
   }
  }
+
+
+
+/*
+function check(arr) {
+  // console.log(arr, "x");
+  var temp = arr.sort();
+  console.log("X: ", currentX);
+  console.log("O: ", currentO);
+  // debugger;
+  for (var k = 0; k < winArray.length; k++) {
+    var arr2 = winArray[k].join();
+    for (var i = 0; i <= 3; i++) {
+      if (
+        (currentX.includes(winArray[i][0]) &&
+          currentX.includes(winArray[i][1]) &&
+          currentX.includes(winArray[i][2])) ||
+        (currentX.includes(winArray[i][2]) &&
+          currentX.includes(winArray[i][1]) &&
+          currentX.includes(winArray[i][0])) ||
+        (currentX.includes(winArray[i][1]) &&
+          currentX.includes(winArray[i][0]) &&
+          currentX.includes(winArray[i][2])) ||
+        (currentX.includes(winArray[i][2]) &&
+          currentX.includes(winArray[i][0]) &&
+          currentX.includes(winArray[i][1]))
+      ) {
+            console.log("X: ", currentX);
+            console.log("O: ", currentO);
+
+            console.log("Player X won");
+            alert("Player X won");
+            temp = temp.slice(i, i + 3);
+            // temp = temp.join();
+            console.log(temp);
+            return;
+      }
+      if (temp == arr2) {
+              // += arr[length - 1 - i][i]
+              // debugger;
+              console.log("Player X won");
+              alert("Player X won");
+              return;
+      } else if (
+        (currentO.includes(winArray[i][0]) &&
+          currentO.includes(winArray[i][1]) &&
+          currentO.includes(winArray[i][2])) ||
+        (currentO.includes(winArray[i][2]) &&
+          currentO.includes(winArray[i][1]) &&
+          currentO.includes(winArray[i][0])) ||
+        (currentO.includes(winArray[i][1]) &&
+          currentO.includes(winArray[i][0]) &&
+          currentO.includes(winArray[i][2])) ||
+        (currentO.includes(winArray[i][2]) &&
+          currentO.includes(winArray[i][0]) &&
+          currentO.includes(winArray[i][1]))
+        ) {
+          console.log("Player O won");
+          alert("Player O won");
+          return;
+      }
+    }
+  }
+}
+*/
