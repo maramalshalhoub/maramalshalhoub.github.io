@@ -70,6 +70,7 @@ $(".ticTac").one("click", function(event) {
 
 //function created to check the both arrays X and O and compare it to winArray multidimensional array
 function check(array, winner) {
+  console.log(winner)
   //declare variable Player turn that sorts all possible arrays holds each players clicks
   var playerTurn = array.sort();
   console.log("X: ", currentX);
@@ -101,11 +102,19 @@ function check(array, winner) {
         // alert(`Player ${winner} won`).delay(1000);
         //Added sweet alert that popup based on the winner
         //and the icon presented is also based on the winner
+        if (winner == "O"){
         swal({
           title: `Player ${winner} won`,
-          icon: `img/${winner}_icon.png`,
+          icon: `https://i.imgur.com/fgXVcus.png`,
           background: "URL(img/homePage.jpg)"
         });
+      } else {
+        swal({
+          title: `Player ${winner} won`,
+          icon: `https://i.imgur.com/lAFlezG.png`,
+          background: "URL(img/homePage.jpg)"
+        });
+      }
 
         //this variable slices 3 values of the array if it's greater than 3
         playerTurn = playerTurn.slice(i, i + 3);
