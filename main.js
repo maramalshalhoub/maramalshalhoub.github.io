@@ -140,7 +140,6 @@ function check(array, winner) {
 function reset() {
   location.reload();
 }
-console.log(array);
 //if the image is clicked enter the function add class animation to it
 $(".buttonImg").on("click", function() {
   console.log($(this));
