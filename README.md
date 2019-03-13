@@ -22,15 +22,15 @@ Third: if user won the page after few seconds the page automatically refreshes t
 
 - **create Website From Scratch**: 
 - **write Comments**: 
-- **sweetAlert**
+- **sweet Alert**
 - **animate.css**
-- **easilyUseLoops**
+- **easily Use Loops** 
 
 ## Future Plan
 
 - **play Against AI**
-- **scoreCounter**
-- **dragDropItems**
-- **userChoosePreferIcon**
+- **score Counter**
+- **drag Drop Items**
+- **user Choose Prefer Icon**
 - **Timeout**
-- **AddVoice**
+- **Add Voice**

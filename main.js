@@ -148,7 +148,7 @@ $(".buttonImg").on("click", function() {
   //once class animation is clicked I set time out then redirect the user to the game page
   setTimeout(function() {
     window.location.href =
-      "file:///Users/maramalshalhoub/Desktop/WDI/Project-1-Prompt/project1/game.html";
+      "https://maramalshalhoub.github.io/game.html";
   }, 800);
 });
 // }
