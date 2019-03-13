@@ -1,9 +1,21 @@
+/* main tags CSS style */
+
 header{
     color:cc9900;
     align-content: center;
 }
 body{
     color:cc9900;
+}
+footer{
+    display: block;
+    text-align: center;   
+}
+
+/* classes CSS style  */
+
+.game-background{
+    background-image: url("../img/grayBG.jpg")   
 }
 .land-body{
     background-image: url(../img/homePage.jpg);
@@ -16,21 +28,6 @@ body{
     top: 32%;
     right:73%;
     left:28%;
-}
-.home-img.buttonImg{
-
-}
-#title-game{
-    color: #cc9900;
-    font-size: 40px;
-    padding: 5px;
-    text-align: center;
-}
-#land{
-    color: #cc9900;
-    font-size: 80px;
-    padding: 5px;
-    text-align: center;
 }
 .game{
     background-image: url("../img/background.jpg");
@@ -59,28 +56,6 @@ body{
     flex-direction:column;
     flex-wrap: wrap;
     border-radius: 15px;
-}
-#playAgain{
-    width:150px;
-    padding:10px;
-    color:white ;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    border:none;
-    background-color: #cc9900;
-    align-items:flex-end;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    top:20px;
-}
-#playAgain:hover {
-    background-color: #D8D8D8;
-    color:black;
-  }
-footer{
-    display: block;
-    text-align: center;   
 }
 .btn-new{
     width:150px;
@@ -115,10 +90,39 @@ footer{
     background-repeat: no-repeat;
     background-position: center;
 }
-.game-background{
-background-image: url("../img/grayBG.jpg")   
+/* IDs CSS style  */
+
+#title-game{
+    color: #cc9900;
+    font-size: 40px;
+    padding: 5px;
+    text-align: center;
+}
+#land{
+    color: #cc9900;
+    font-size: 80px;
+    padding: 5px;
+    text-align: center;
 }
 #xoimg{
     display: flex;
     justify-content: center;
+}
+#playAgain{
+    width:150px;
+    padding:10px;
+    color:white ;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border:none;
+    background-color: #cc9900;
+    align-items:flex-end;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    top:20px;
+}
+#playAgain:hover {
+    background-color: #D8D8D8;
+    color:black;
 }
