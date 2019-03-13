@@ -103,7 +103,9 @@ function check(array, winner) {
         console.log("X: ", currentX);
         console.log("O: ", currentO);
 //if compared successfully and user wins alert success message
-        // alert(`Player ${winner} won`).delay(1000);
+      // alert(`Player ${winner} won`).delay(1000);
+        //Added sweet alert that popup based on the winner 
+        //and the icon presented is also based on the winner
         swal({
           title: `Player ${winner} won`,
           icon: `img/${winner}_icon.png`,
@@ -121,6 +123,8 @@ function check(array, winner) {
   //if statement compares the player turn with the joined array 
       if (playerTurn == arrayJoin) {
         // debugger;
+        //Added sweet alert that popup based on the winner 
+        //and the icon presented is also based on the winner
         swal({
           title: `Player ${winner} won`,
           icon: `img/${winner}_icon.png`,
