@@ -130,11 +130,19 @@ function check(array, winner) {
         // debugger;
         //Added sweet alert that popup based on the winner
         //and the icon presented is also based on the winner
-        swal({
-          title: `Player ${winner} won`,
-          icon: `img/${winner}_icon.png`,
-          background: "URL(img/homePage.jpg)"
-        });
+        if (winner == "O"){
+          swal({
+            title: `Player ${winner} won`,
+            icon: `https://i.imgur.com/fgXVcus.png`,
+            background: "URL(img/homePage.jpg)"
+          });
+        } else {
+          swal({
+            title: `Player ${winner} won`,
+            icon: `https://i.imgur.com/lAFlezG.png`,
+            background: "URL(img/homePage.jpg)"
+          });
+        }
 
         // alert(`Player ${winner} won`).delay(1000);
         //call function reset to reload the page
