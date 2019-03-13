@@ -167,4 +167,3 @@ $(".buttonImg").on("click", function() {
       "https://maramalshalhoub.github.io/game.html";
   }, 800);
 });
-// }
