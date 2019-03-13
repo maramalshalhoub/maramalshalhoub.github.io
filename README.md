@@ -26,7 +26,7 @@ Third: if user won the page after few seconds the page automatically refreshes t
 - **animate.css**
 - **easily Use Loops** 
 
-## Future Plan
+## Future Plans
 
 - **play Against AI**
 - **score Counter**
@@ -34,3 +34,11 @@ Third: if user won the page after few seconds the page automatically refreshes t
 - **user Choose Prefer Icon**
 - **Timeout**
 - **Add Voice**
+
+## Tech used
+
+## Deployment 
+
+## Developer 
+
+## 
