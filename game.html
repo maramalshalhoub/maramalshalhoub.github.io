@@ -5,45 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <title>Tic Tac Toe Game</title>
 </head>
-<body>
-    <header ondrop= "drop(event)" ondragover= "allowDrop(event)">Tic Tac Toe Game</header>
-    <h3>lets start playing:</h3>
-    <h5>Player one choose prefered icon:</h5>
-    <a><img src="img/x_icon.png" alt="X" draggable="true" ondragstart="drag(event)"/></a>
-    <a></a><img src="img/o_icon.png" alt="O" draggable="true" ondragstart="drag(event)"/></a>
-<div class="game" ondrop= "drop(event)" ondragover= "allowDrop(event)" >
+<body class="game-background">
+    <header>
+    <h3 id="title-game" > Tic Tac Toe Game </h3> 
+        <div id="xoimg">
+            <img src="img/x_icon.png" alt="X" />
+            <img src="img/o_icon.png" alt="O" />
+        </div>
+    </header>
+<div class="game" >
     <br/>
-    <div class="ticTac" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="ticTac" id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="ticTac" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="ticTac" id="4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="ticTac" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="ticTac" id="6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="ticTac" id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="ticTac" id="8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div class="ticTac" id="9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="ticTac" id="1" ></div>
+    <div class="ticTac" id="2" ></div>
+    <div class="ticTac" id="3" ></div>
+    <div class="ticTac" id="4" ></div>
+    <div class="ticTac" id="5" ></div>
+    <div class="ticTac" id="6" ></div>
+    <div class="ticTac" id="7" ></div>
+    <div class="ticTac" id="8" ></div>
+    <div class="ticTac" id="9" ></div>
 </div>
 <div class="clearfix"></div>
 <br/>
-<footer>
-        <button id="playAgain">Play Again</button>
-        <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
-</footer>
+<!-- <ul>
+    <li><a href="../project1/index.html">Home</a></li>
+    <li><a href="../project1/game.html">About</a></li>
+    <li><a href="../project1/game.html" onclick="reset()"> New Game</a></li>
+</ul> -->
+  
 
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<footer>
+        <button id="playAgain" onclick="reset()">Play Again</button>
+</footer>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script src="main.js"></script>
 </body>
 </html>
-
-<!-- <body>
-    <div class="container">
-      <div class="zone"></div>
-      <div class="zone"></div>
-      <div class="zone"></div>
-      <div class="zone"></div>
-    </div>
-    <div class="message"></div>
-  </body> -->

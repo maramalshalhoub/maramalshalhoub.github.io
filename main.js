@@ -103,20 +103,64 @@ function check(array, winner) {
         console.log("X: ", currentX);
         console.log("O: ", currentO);
 //if compared successfully and user wins alert success message
-        alert(`Player ${winner} won`);
+        // alert(`Player ${winner} won`).delay(1000);
+        swal({
+          title: `Player ${winner} won`,
+          icon: `img/${winner}_icon.png`,
+          background: "img/homePage.jpg"
+        });
         //this variable slices 3 values of the array if it's greater than 3 
         playerTurn = playerTurn.slice(i, i + 3);
         // playerTurn = playerTurn.join();
         console.log(playerTurn);
        //end of loop
+  //if user wins call function reset to reload the page
+       setInterval(reset, 3000);
         return;
       }
   //if statement compares the player turn with the joined array 
       if (playerTurn == arrayJoin) {
         // debugger;
-        alert(`Player ${winner} won`);
+        swal({
+          title: `Player ${winner} won`,
+          icon: `img/${winner}_icon.png`,
+          background: "img/homePage.jpg"
+        });
+        
+  // alert(`Player ${winner} won`).delay(1000);
+  //call function reset to reload the page
+        // reset();
+        setInterval(reset, 3000);
+
         return;
       }
     }
   }
 }
+//create function that reload the page and become empty so the user can play again 
+//or if the user wins the reset function is used
+function reset(){ 
+location.reload();
+}
+
+// function img(){
+// document.querySelector('.buttonImg').onclick = setTimeout(function() {
+//     function moveAnimation(){
+//       const addAnimation =  document.querySelector('.buttonImg')
+//       addAnimation.classList.add('animated', 'zoomOutUp')
+//     }
+//   }, 10000);
+// }
+
+
+// function img(){
+  //if the image is clicked enter the function add class animation to it
+  $('.buttonImg').on("click", function() {
+    console.log($(this))
+    $(this).addClass("animated zoomOutUp");
+  //once class animation is clicked I set time out then redirect the user to the game page 
+    setTimeout(function(){
+      window.location.href = "file:///Users/maramalshalhoub/Desktop/WDI/Project-1-Prompt/project1/game.html";
+    }, 800)
+  })
+// }

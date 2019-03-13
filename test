@@ -203,6 +203,36 @@ function check2(currentX, winArray) {
 
 
 
+//   for(i=0; i<boxes.length; i++) 
+// {
+//       boxes[i].classList.remove("x");
+// } 
+
+
+// document.querySelector('.btn-new').addEventListener("click", function(){
+//       // currentScore = 0;
+//       // currentPlayer = 0;
+//       // finalScore = [0,0];
+//       //  win = 50;
+
+//        var currentX = [];
+//        var currentO = [];
+//        var flag = true;
+//        var checkWin = 0;
+
+//     });
+//     document.querySelector(".btn-hold").addEventListener("click", function(){
+  
+//       finalScore[currentPlayer] += currentScore;
+//       document.querySelector("#score-" + currentPlayer).textContent = finalScore[currentPlayer];
+//       currentScore = 0;
+//       document.querySelector("#current-"+ currentPlayer).textContent = currentScore;
+  
+//       next();
+  
+//   });
+
+
 
 function win() {
   console.log(currentX)
