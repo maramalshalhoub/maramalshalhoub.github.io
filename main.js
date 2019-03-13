@@ -104,8 +104,9 @@ function check(array, winner) {
         swal({
           title: `Player ${winner} won`,
           icon: `img/${winner}_icon.png`,
-          background: "img/homePage.jpg"
+          background: "URL(img/homePage.jpg)"
         });
+
         //this variable slices 3 values of the array if it's greater than 3
         playerTurn = playerTurn.slice(i, i + 3);
         // playerTurn = playerTurn.join();
@@ -123,7 +124,7 @@ function check(array, winner) {
         swal({
           title: `Player ${winner} won`,
           icon: `img/${winner}_icon.png`,
-          background: "img/homePage.jpg"
+          background: "URL(img/homePage.jpg)"
         });
 
         // alert(`Player ${winner} won`).delay(1000);

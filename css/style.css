@@ -90,6 +90,19 @@ footer{
     background-repeat: no-repeat;
     background-position: center;
 }
+/* swal alert button CSS style */
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #cc9900;
+    font-size: 12px;
+    border: 1px solid #cc9900;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
+  .swal-button:hover {
+    background-color: #D8D8D8;
+    color:black;
+  }
 /* IDs CSS style  */
 
 #title-game{
